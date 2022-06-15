@@ -1,0 +1,1 @@
+FROM datamechanics/spark-3.2.1:latest
