@@ -15,8 +15,9 @@ object App {
 
   def main(args: Array[String]) {
     val logger: Logger = LoggerFactory.getLogger(this.getClass)
-    println("Hello World from Spark!")
-    println("concat arguments = " + foo(args))
+    logger.info("Start Spark Test execution")
+    logger.info("Hello World from Spark!")
+    logger.info("concat arguments = " + foo(args))
     val spark: SparkSession = SparkSession.builder().appName("HelloWorld from Spark").getOrCreate()
 
     val testDF = spark.range(1, 100).toDF("columnId")
